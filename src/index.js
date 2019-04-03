@@ -1,8 +1,6 @@
 const promo = ["émilie", "laurene", "sophie", "vanessa", "audray", "cathy", "chloé"];
 const promoLength = promo.length;
 
-
-
 const shuffle = (array) => {
   let arrayLength = array.length;
   const shufflePromo = [];
@@ -15,9 +13,7 @@ for (let i = 0; i < arrayLength; i++){
   return shufflePromo;
 };
 
-
-const mapromo = shuffle(promo)
-
+const mapromo = shuffle(promo);
 
 const team = (arrayShuffeled) => {
   const team = new Map();
@@ -27,8 +23,6 @@ const team = (arrayShuffeled) => {
   return team;
 };
 
-//console.log(team(mapromo));
-
 const isEven = (arrayLength) => {
   response = (arrayLength%2 === 0) ? true : false;
   return response;
@@ -36,13 +30,16 @@ const isEven = (arrayLength) => {
 
 mapToArrayShuffled = Array.from(team(mapromo));
 
-if(isEven(promoLength) === true){
-  console.log(mapToArrayShuffled);
+const findMyMate = (promoShuffled) => {
+  if(isEven(promoLength) === true){
+  return promoShuffled;
 }else{
-  mapToArrayShuffled[2].push(mapToArrayShuffled[3][0]);
-  mapToArrayShuffled.splice(mapToArrayShuffled.length-1, 1);
-  console.log (mapToArrayShuffled);
+  promoShuffled[2].push(promoShuffled[3][0]);
+  promoShuffled.splice(promoShuffled.length-1, 1);
+  return promoShuffled;
+  };
 };
-//console.log(mapToArrayShuffled[2].push(mapToArrayShuffled[3][0]));
-//console.log(mapToArrayShuffled[mapToArrayShuffled.length-1]);
-//console.log(mapToArrayShuffled);
+
+console.log(findMyMate(mapToArrayShuffled));
+
+
