@@ -1,20 +1,14 @@
-const webpack = require("webpack");
-const path = require("./node_modules/.bin/webpack-dev-server");
+const path = require('path');
 
-let config = {
+module.exports = {
   devServer: {
     watchContentBase: true,
   },
   entry: "./src/index.js",
   mode: "development",
   output: {
-    //path: path.resolve(__dirname, "./src"),
-    filename: "./bundle.js"
-  }
-}
-
-module.exports = config;
-
-
-
-
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
+  },
+  devtool: "sourcemap"
+};
