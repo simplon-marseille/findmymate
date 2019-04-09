@@ -205,7 +205,11 @@ arrayOfTeam.forEach((element) => {
   row.innerHTML += '<div class="col-md-4 colonne">'
   + `<h2 style="margin-top: 40px;">Team ${i = i + 1}</h2>`
   + `<img src="./asset/images/${element[0].photo}" style="width: 30%; border-radius:3%; box-shadow: 3px 3px 3px gray;">`
-  + `<img src="./asset/images/${element[1].photo}" style="width: 30%; border-radius:3%; box-shadow: 3px 3px 3px gray;">`;
-  row.innerHTML += '</div>'
+  + `<img src="./asset/images/${element[1].photo}" id="lastRow" style="width: 30%; border-radius:3%; box-shadow: 3px 3px 3px gray;">`
+  if(element.length === 3){
+    row.innerHTML += `<img src="./asset/images/${element[2].photo}" style="width: 11%; border-radius:3%; box-shadow: 3px 3px 3px gray;">`;
+
+  };
+  row.innerHTML += '</div>';
 });
 
