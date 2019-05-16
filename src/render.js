@@ -1,8 +1,3 @@
-//  const helloWorld = () => {
-//   console.log("nicolas");
-// };
-
-// module.exports = helloWorld;
 
 const codeuse1 = {
   nom: "agathe",
@@ -124,17 +119,14 @@ const codeuse23 = {
 
 
 
-const promo = [codeuse1,
+const promo = [
 codeuse2,
 codeuse3,
-codeuse4,
 codeuse5,
-codeuse6,
 codeuse7,
 codeuse8,
 codeuse9,
 codeuse10,
-codeuse11,
 codeuse12,
 codeuse13,
 codeuse14,
@@ -143,7 +135,6 @@ codeuse16,
 codeuse17,
 codeuse18,
 codeuse19,
-codeuse20,
 codeuse21,
 codeuse22,
 codeuse23
