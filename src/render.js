@@ -123,7 +123,6 @@ const promo = [
 codeuse2,
 codeuse3,
 codeuse5,
-codeuse7,
 codeuse8,
 codeuse9,
 codeuse10,
